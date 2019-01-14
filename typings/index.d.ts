@@ -11,8 +11,8 @@ interface Queries {
 }
 
 export type RenderResult<Q extends Queries = typeof queries> = {
-  container: HTMLElement
-  baseElement: HTMLElement
+  container: HTMLDivElement | HTMLElement
+  baseElement: HTMLBodyElement | HTMLDivElement | HTMLElement
   debug: (baseElement?: HTMLElement | DocumentFragment) => void
   rerender: (ui: React.ReactElement<any>) => void
   unmount: () => boolean
